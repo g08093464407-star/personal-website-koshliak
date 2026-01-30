@@ -24,9 +24,11 @@ const socialLinks: Array<{
   label: string
   icon: React.ComponentType<{ className?: string }>
 }> = [
-  { href: "https://github.com", label: "GitHub", icon: Github },
-  { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
-  { href: "https://twitter.com", label: "Twitter", icon: Twitter },
+  {
+    href: "https://www.linkedin.com/in/volodymyr-koshliak-b790383a9/",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
 ]
 
 /* ================= FOOTER ================= */
