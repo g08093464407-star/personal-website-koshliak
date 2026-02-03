@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title:
     "Переговори з японським бізнесом без культурних помилок | Volodymyr Koshliak",
 
-  // 📝 SEO Description (сенс збережено, структура під Google)
+  // 📝 SEO Description
   description:
     "Консультант з переговорів з японським бізнесом. Супроводжую українсько-японські бізнес-взаємодії, допомагаючи уникати культурних і комунікаційних помилок між Україною та Японією.",
 
@@ -26,6 +26,11 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: process.env.NEXT_PUBLIC_SITE_URL,
+  },
+
+  // ✅ Google Search Console verification
+  verification: {
+    google: "dwOom22JIus2FwpnqKf04DhmwFC7PprQ6NRBtx0SgXY",
   },
 
   openGraph: {
