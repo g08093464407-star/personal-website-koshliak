@@ -94,10 +94,6 @@ export default function RootLayout({
           "японська бізнес-культура",
           "міжкультурна комунікація",
         ],
-        worksFor: {
-          "@type": "Organization",
-          name: "Independent consultant",
-        },
       },
       {
         "@type": "ProfessionalService",
@@ -137,7 +133,6 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
