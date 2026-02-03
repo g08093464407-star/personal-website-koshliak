@@ -76,6 +76,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const postalAddress = {
+    "@type": "PostalAddress",
+    addressLocality: "Toyota",
+    addressRegion: "Aichi",
+    addressCountry: "Japan",
+  }
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -102,6 +109,10 @@ export default function RootLayout({
         url: SITE_URL,
         image: "https://v.koshliak.com/images/2026-01-28%2012.17.25.jpg",
         email: "koshliak.volodymyr.office@gmail.com",
+
+        // ✅ ДОДАЛИ address НА ВЕРХНЬОМУ РІВНІ (це і хоче Rich Results Test)
+        address: postalAddress,
+
         areaServed: {
           "@type": "Country",
           name: "Україна",
@@ -114,15 +125,12 @@ export default function RootLayout({
           "Бізнес-комунікація з Японією",
         ],
         availableLanguage: ["uk", "ja", "en"],
+
+        // залишаємо location теж (це корисно і логічно)
         location: {
           "@type": "Place",
           name: "Toyota, Aichi, Japan",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Toyota",
-            addressRegion: "Aichi",
-            addressCountry: "Japan",
-          },
+          address: postalAddress,
         },
       },
     ],
